@@ -54,7 +54,7 @@ class EsuRestApi implements EsuApi {
 	private $context = '/rest';
 	private $proto;
 	private $utf8 = True;
-	private static $ID_EXTRACTOR = '/\/[0-9a-zA-Z]+\/objects\/([0-9a-f]{44})/';
+	private static $ID_EXTRACTOR = '/\/[0-9a-zA-Z]+\/objects\/([0-9a-f\-]{44,101})/';
 	private static $ACCESS_TOKEN_EXTRACTOR = '/\/[0-9a-zA-Z]+\/accesstokens\/(.*)/';
 	
 	/**
